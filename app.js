@@ -1,11 +1,34 @@
-const PI = 3.14;
-PI = 42
-//Wont let you
+// function createInstructor(firstName, lastName){
+//     return {
+//       firstName: firstName,
+//       lastName: lastName
+//     }
+// };
 
-//var is reassignable and redeclarable and let is only reassignable
 
-//var can be reassined and redeclared, you cannot do either using const
+function createInstructor(firstName, lastName){
+    return {
+        firstName,
+        lastName
+    }
+};
 
-//let is reassignable but not const, nor is const redeclarable
+let firstName = "Michael";
+let lastName = "Dyalram";
 
-//it is when variables are put at the top of the scope they're declared in
+let favoriteNumber = 42;
+
+let instructor = {
+    firstname: "Colt",
+    [favoriteNumber]: "That is my favorite!"
+};
+
+
+function createAnimal(species, verb, noise){
+    return {
+        species,
+        [noise](){
+            return noise;
+        }
+    }
+};
