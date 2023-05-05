@@ -1,26 +1,27 @@
-//8, 1846
-//1846, 1659
-//Your name is Alejandro and you like purple
-//Your name is Melissa and you like green
-//your name is undefined and you like green
+// 1, 2, 3 ,4 
 
+//ref
 
-//Array Destructuring
-//Maya, Marisa, Chi
-//Raindrops on roses, //whiskers on kitten, //"Bright copper kettles","warm woolen mittens, "Brown paper packages tied up with strings
-//10, 20, 30
+//Array(3) => true
+//Array (3) => false
 
-const obj = {
-    numbers: {
-        a: 1,
-        b: 2
-    }
+const hasDuplicate = arr => new Set(arr).size !== arr.length;
+
+function isVowel(char){
+    return "aeious".includes(char);
 };
 
-const {a,b} = obj.numbers;
-
-
-let arr = [1, 2];
-[arr[1], arr[0]] = [arr[0], arr[1]]; 
-
-const raceResults = ([first, second, third, ...rest]) => {[first, second, third, rest]}
+function vowelCount (str){
+    const vowelMap = new Map();
+    for( let string of str){
+        let strL = string.toLowerCase()
+        if (isVowel(strL)){
+            if (vowelMap.has(strL)){
+                vowelMap.set(strL, vowelMap.get(strL) + 1);
+            } else {
+                vowelMap.set(strL, 1);
+            }
+        }
+    }
+    return vowelMap;
+};
