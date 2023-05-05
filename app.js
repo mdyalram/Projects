@@ -1,34 +1,26 @@
-// function createInstructor(firstName, lastName){
-//     return {
-//       firstName: firstName,
-//       lastName: lastName
-//     }
-// };
+//8, 1846
+//1846, 1659
+//Your name is Alejandro and you like purple
+//Your name is Melissa and you like green
+//your name is undefined and you like green
 
 
-function createInstructor(firstName, lastName){
-    return {
-        firstName,
-        lastName
+//Array Destructuring
+//Maya, Marisa, Chi
+//Raindrops on roses, //whiskers on kitten, //"Bright copper kettles","warm woolen mittens, "Brown paper packages tied up with strings
+//10, 20, 30
+
+const obj = {
+    numbers: {
+        a: 1,
+        b: 2
     }
 };
 
-let firstName = "Michael";
-let lastName = "Dyalram";
-
-let favoriteNumber = 42;
-
-let instructor = {
-    firstname: "Colt",
-    [favoriteNumber]: "That is my favorite!"
-};
+const {a,b} = obj.numbers;
 
 
-function createAnimal(species, verb, noise){
-    return {
-        species,
-        [noise](){
-            return noise;
-        }
-    }
-};
+let arr = [1, 2];
+[arr[1], arr[0]] = [arr[0], arr[1]]; 
+
+const raceResults = ([first, second, third, ...rest]) => {[first, second, third, rest]}
