@@ -25,3 +25,5 @@ function vowelCount (str){
     }
     return vowelMap;
 };
+
+/*hello*/
